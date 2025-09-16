@@ -1,39 +1,115 @@
-<!Doctype html>
+<!DOCTYPE html>
 
-<html>		
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial=1.0">
-        <title>Nicholas Metzger | F1 Dashboard</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../style/style.css" >
-    </head>
-    <body>
-        <nav>
-            <div class="nav-bar">
-                <a href="../index.html">Home</a>
-                <a href="../resume/resume.html">Resume</a>
-                <a href="projects.html">Projects</a>
-            </div>
-        </nav>
-		<title>Formula 1 Dashboard</title>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Nicholas Metzger | F1 Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <a href="../index.html">Home</a>
+        <a href="../resume/resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </nav>
+    <title>Formula 1 Dashboard</title>
 
-		<h1>Groundwork</h1>
+    <h2>Groundwork</h2>
 
-		<p>Formula 1 is a sport where data is king. Using data collected from the cars to squeeze out an extra tenth of a second each lap can mean the difference between the top spot of the podium and mising out on any points during a race. Thankfully for enthusists like myself, much of that data is available to the public. Once I discovered a few free apis that allow you to pull the data, I knew I would want to do something to use.</p>
+    <p>
+      Formula 1 is a sport where data is king. Using data collected from the
+      cars to squeeze out an extra tenth of a second each lap can mean the
+      difference between the top spot of the podium and mising out on any points
+      during a race. Thankfully for enthusists like myself, much of that data is
+      available to the public. Once I discovered a few free apis that allow you
+      to pull the data, I knew I would want to do something to use.
+    </p>
 
-		<p>This project was pretty basic, but it was fun to dive into a new api and learn how to use more of the features of some python packages that I already knew.</p>
+    <p>
+      This project was pretty basic, but it was fun to dive into a new api and
+      learn how to use more of the features of some python packages that I
+      already knew.
+    </p>
 
-		<h1>Skills Involved</h1>
-		<ul>
-				<li>Api Calls</li>
-				<li>Jupyter Notebooks</li>
-				<li>Python Packages: Pandas, MatPlotLib, etc.</li>
-				<li>Data Vizualization</li>
-		</ul>
-		
-		<h1>Initial Exploration</h1>
+    <h2>Skills Involved</h2>
+    <ul>
+      <li>Api Calls</li>
+      <li>Jupyter Notebooks</li>
+      <li>Python Packages: Pandas, MatPlotLib, etc.</li>
+      <li>Data Vizualization</li>
+    </ul>
 
-		<p>Initially I was using the ______ api, which allowed users to fetch data about almost any f1 race using a very simple api call. </p>
-    </body>
+    <h2>Initial Exploration</h2>
+
+    <p>
+      Initially I was using the open f1 api, which allowed users to fetch data
+      about almost any f1 race using a very simple api call. After figuring out
+      how to make calls I decided it might be fun to make an interactive plot to
+      explore the data. That led to the first plot.
+    </p>
+
+    <img
+      src="../media/f1-project/interactive-plot.png"
+      alt="Quick and simple graph of f1 driver data"
+    />
+
+    <p>
+      While not very pretty, this served as a quick vizualization of everything
+      that can be done. It can't be seen in the static version, but the plot
+      shows the approximate position of the drivers on the track on the right
+      side and then a graph of the selected stat in a snapshot of the race.
+      Using the interact wrapper I added a dropdown menu to select a stat to
+      show and a slider to select a point in the race.
+    </p>
+
+    <p>
+      While this was interesting, it was definitley a first attempt. While I was
+      looking into it more, I discovered another similar api, fastf1, which was
+      slightly more integrated into python and pandas usage, fetching objects
+      that automatically got parsed into a pandas dataframe, which if you know
+      what that means you know is very convienient. Additionally, it was easier
+      to fetch just the information necessary for what I needed, which helped
+      because sometimes the old api would have timeout issues since the only way
+      I understood to get the data I needed also grabbed a lot of unesscessary
+      things.
+    </p>
+
+    <p>Eventually, this is the result.</p>
+
+    <img
+      src="../media/f1-project/race-report.png"
+      alt="A graph with 4 plots of driver data"
+    />
+
+    <p>
+      What's fun about this is because of the way the api handles things, the
+      script will generate a race report of the most recent race each time it is
+      run.
+    </p>
+
+    <p>
+      Definitley a simple project, but it was fun to create something that
+      connects with a sport I like so much. I can't take total credit of course,
+      being it was my first time working with the api I did learn a lot from the
+      examples listed on the website for the fastf1 api, but I had a really good
+      time building on what was there to make a simple race report of my
+      favorite driver.
+    </p>
+
+    <p>
+      If you are interested you can view the entire code for this project in the
+      <a
+        href="https://github.com/nickthe7th/DataProjects/tree/e5ec1966d4909243e0ac5d45c9aaa019e91cb4d2/Ferrarri_Dashboard"
+        >github repo.</a
+      >
+    </p>
+  </body>
 </html>
