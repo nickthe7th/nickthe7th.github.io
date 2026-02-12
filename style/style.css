@@ -69,3 +69,11 @@ nav{
 .pdf {
     height: 100vh;
 }
+
+.code-block {
+	font-family: Consolas,"courier new";
+	background-color: #000000;
+	color: #00FF00;
+	padding: 20px;
+	border-color: #888888;
+}
